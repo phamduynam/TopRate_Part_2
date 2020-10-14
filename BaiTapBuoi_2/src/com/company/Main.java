@@ -32,11 +32,8 @@ public class Main {
         for(Map.Entry<String, Long> entry : dataSorted.entrySet()){
             System.out.println( entry.getKey() + " " + entry.getValue());
        }
-        List key = new ArrayList(dataSorted.keySet());
-        String kitu = key.get(1).toString();
-//        System.out.println((int)kitu.charAt());
-//        System.out.println((int)'a');
-//        // Tìm kiếm
+
+       // Tìm kiếm
         searchByWords(data);
 
     }
@@ -192,12 +189,20 @@ public class Main {
             }
 
 
-            System.out.println("Top  5 Search : ");
-            if(key.size() < 5){
+            if(key.size() == 0 )
+            {
+                System.out.println("Không tìm thấy kết quả !!!");
+            }
+            else if(key.size() < 5)
+            {
+
+                System.out.println("Top " + key.size() +" Search : ");
                 for (int i = key.size() - 1 ; i >= 0 ; i --){
                     System.out.println("Key : " + key.get(i) + "  Value : " + listSearch.get(key.get(i)) );
                 }
-            }else{
+            }else
+                {
+                System.out.println("Top 5 Search : ");
                 for(int i = key.size() - 1 ; i >= key.size() - 6 ; i --){
                     System.out.println("Key : " + key.get(i) + "  Value : " + listSearch.get(key.get(i)) );
                 }
