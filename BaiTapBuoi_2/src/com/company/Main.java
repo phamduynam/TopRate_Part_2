@@ -32,11 +32,8 @@ public class Main {
         for(Map.Entry<String, Long> entry : dataSorted.entrySet()){
             System.out.println( entry.getKey() + " " + entry.getValue());
        }
-        List key = new ArrayList(dataSorted.keySet());
-        String kitu = key.get(1).toString();
-//        System.out.println((int)kitu.charAt());
-//        System.out.println((int)'a');
-//        // Tìm kiếm
+
+      // Tìm kiếm
         searchByWords(data);
 
     }
